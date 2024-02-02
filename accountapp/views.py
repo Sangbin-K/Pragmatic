@@ -33,6 +33,4 @@ class AccountCreateView(CreateView):
     success_url = reverse_lazy('accountapp:hello_world')
     template_name = 'accountapp/create.html'
 
-def logout_view(request):
-    logout(request)
-    return redirect(reverse_lazy('accountapp:login'))
+
