@@ -12,10 +12,13 @@
                 <span>Login</span>
             </a>
             {% else %}
-                <form method="post" action="{% url 'accountapp:logout' %}">
-                        {% csrf_token %}
-                        <button class="btn btn-secondary btn-sm" type="submit">{{ user.username }} (Logout)</button>
-                </form>
+            <a href="{% url 'accountapp:detail'  pk=user.pk %}">
+                <span>My Page</span>
+            </a>
+            <form method="post" action="{% url 'accountapp:logout' %}">
+                {% csrf_token %}
+                <button class="btn btn-secondary btn-sm" type="submit">{{ user.username }} (Logout)</button>
+            </form>
             {% endif %}
         </div>
     </div>
