@@ -12,7 +12,7 @@
                 <span>Login</span>
             </a>
             {% else %}
-            <a href="{% url 'accountapp:detail'  pk=user.pk %}">
+            <a href="{% url 'accountapp:detail' pk=user.pk %}">
                 <span>My Page</span>
             </a>
             <form method="post" action="{% url 'accountapp:logout' %}">
