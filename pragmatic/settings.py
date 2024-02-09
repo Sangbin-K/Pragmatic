@@ -14,6 +14,7 @@ from pathlib import Path
 
 import os, environ
 
+from django.conf.global_settings import MEDIA_URL
 from django.urls import reverse_lazy
 
 env = environ.Env(
@@ -144,3 +145,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 LOGIN_REDIRECT_URL = reverse_lazy('accountapp:hello_world')
 LOGOUT_REDIRECT_URL = reverse_lazy('accountapp:login')
+
+MEDIA_URL = '/media/'
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
