@@ -1,9 +1,14 @@
 asgiref==3.7.2
 beautifulsoup4==4.12.3
-Django==3.2.0
+Django==3.2
 django-bootstrap4==24.1
 django-environ==0.11.2
+environ==1.0
+gunicorn==21.2.0
+importlib-metadata==7.0.1
+packaging==23.2
 pillow==10.2.0
 pytz==2024.1
 soupsieve==2.5
 sqlparse==0.4.4
+zipp==3.17.0
