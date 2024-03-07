@@ -1,5 +1,6 @@
 from .base import *
 
+
 def read_secret(secret_name):
     file = open('/run/secrets/' + secret_name)
     secret = file.read()
@@ -15,7 +16,7 @@ env = environ.Env(
 
 # reading .env file
 environ.Env.read_env(
-   env_file= os.path.join(BASE_DIR, '.env')
+   env_file=os.path.join(BASE_DIR, '.env')
 )
 
 # Quick-start development settings - unsuitable for production
@@ -34,12 +35,12 @@ ALLOWED_HOSTS = ['*']
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
 DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.mysql",
-        "NAME": "django",
-        "USER": "django",
-        "PASSWORD": read_secret('MYSQL_PASSWORD'),
-        "HOST": "mariadb",
-        "PORT": "3306",
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'django',
+        'USER': 'django',
+        'PASSWORD': read_secret('MYSQL_PASSWORD'),
+        'HOST': 'mariadb',
+        'PORT': '3306',
     }
 }
